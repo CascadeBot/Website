@@ -1,0 +1,67 @@
+@use "vars" as v;
+
+$logo-width: 3rem;
+$circle-width: 300vw;
+$circle-height: 200vw;
+
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  position: relative;
+  z-index: 5;
+
+  margin-top: -5rem;
+  padding: 1rem;
+
+  .logo {
+    width: $logo-width;
+    color: v.$primary-logo;
+    position: relative;
+    margin-bottom: 1rem;
+
+    > svg {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 2rem;
+      left: calc( 1.5rem /2 - 150vw);
+      width: $circle-width;
+      height: $circle-height;
+      z-index: 4;
+
+      background-color: v.$bg-2;
+      border-radius: 50%;
+    }
+  }
+
+  > h1 {
+    font-size: 3.125rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    max-width: 41rem;
+  }
+
+  > p {
+    margin: 0 auto 2rem auto;
+    max-width: 30rem;
+    line-height: 1.8;
+  }
+}
+
+@media screen and (max-width: v.$break-medium) {
+  .hero {
+    > h1 {
+      font-size: 1.8rem;
+    }
+  }
+}

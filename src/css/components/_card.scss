@@ -1,0 +1,33 @@
+@use "vars" as v;
+
+.card {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  padding: .7rem 1.3rem;
+  background-color: v.$bg-3;
+  border-radius: v.$card-radius;
+
+  > p {
+    color: v.$txt-lighter;
+    margin: 0;
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (max-width: v.$break-small) {
+  .card {
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+
+    > p {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  }
+}

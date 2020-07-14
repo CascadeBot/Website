@@ -1,0 +1,13 @@
+@use "vars" as v;
+
+h1, .h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  color: v.$txt-bold;
+}
+
+p, .p {
+  font-weight: normal;
+  font-size: 1rem;
+  color: v.$txt-base;
+}
