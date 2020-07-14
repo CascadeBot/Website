@@ -15,7 +15,7 @@ COPY . .
 # Build both the server and the client
 RUN npm run build
 
-EXPOSE 8080
-ENV PORT 8080
+FROM nginx
+WORKDIR /usr/share/nginx/html
+COPY --from=0 /usr/src/app/dist .
 
-CMD ["npm", "run", "prod"]

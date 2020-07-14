@@ -1,0 +1,15 @@
+@use "computed/font" as f;
+@use "vars" as v;
+
+body, html {
+  @include f.font;
+
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  background-color: v.$bg-1;
+}

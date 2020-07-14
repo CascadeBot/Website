@@ -1,0 +1,6 @@
+@use "vars" as v;
+
+@mixin font {
+  font-family: v.$font-family;
+  font-size: initial;
+}

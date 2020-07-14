@@ -1,0 +1,23 @@
+@use "vars" as v;
+@use "computed/font" as f;
+
+button, .btn {
+  @include f.font;
+  border: none;
+  background-color: v.$btn-primary;
+  color: v.$btn-primary-text;
+  padding: .5rem 1.4rem;
+  border-radius: v.$btn-radius;
+  transition: background-color 50ms ease-in-out, transform 50ms ease-in-out;
+  text-decoration: none;
+
+  &:hover, &:active {
+    text-decoration: none;
+    background-color: v.$btn-primary-hover;
+  }
+
+  &:active {
+    text-decoration: none;
+    transform: scale(1.05);
+  }
+}

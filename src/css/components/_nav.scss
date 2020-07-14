@@ -1,0 +1,58 @@
+@use "vars" as v;
+
+.nav {
+  position: relative;
+  z-index: 10;
+
+  > .content {
+    display: flex;
+    max-width: 100%;
+    width: v.$break-max;
+    margin: 0 auto;
+    padding: 3rem;
+
+    > .left {
+      flex: 1;
+    }
+  }
+
+  .brand, a.brand, a.brand:hover, a.brand:active {
+    display: inline-flex;
+    align-items: center;
+
+    font-weight: bold;
+    color: v.$txt-bold;
+    text-decoration: none;
+    margin-right: 1rem;
+
+    .logo {
+      display: inline-block;
+      color: v.$primary-logo;
+      width: 1.7rem;
+      margin-right: 1rem;
+
+      > svg {
+        width: 100%;
+      }
+    }
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+
+    > a {
+      padding: .5rem .7rem;
+    }
+  }
+
+  a {
+    color: v.$txt-lighter;
+    text-decoration: none;
+
+    &:hover, &:active {
+      text-decoration: none;
+      color: v.$txt-bold;
+    }
+  }
+}
