@@ -1,3 +1,3 @@
 # cascadebot website
 
-currently servers coming soon page
+currently serves coming soon page
