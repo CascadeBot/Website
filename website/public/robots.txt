@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-
-User-agent: nsa
-Disallow: /
-
-User-agent: mee6
-Disallow: /
